@@ -55,7 +55,7 @@ def load_all():
     ])
 
     # 🔐 Secure API key from Streamlit Secrets
-    client = OpenAI(api_key=os.getenv("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"))
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     return tokenizer, model, embedding_model, label_encoder, client
 
