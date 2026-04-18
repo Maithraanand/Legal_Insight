@@ -13,12 +13,19 @@ import nltk
 import os
 import tempfile
 
-# ================== FIX NLTK (IMPORTANT) ==================
+# ================== FIX NLTK ==================
+import nltk
+
+# Download all required punkt resources
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
     nltk.download('punkt')
 
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')
 # ================== PATHS ==================
 BASE_PATH = "data"
 CSV_PATH = "data/master_clauses.csv"
